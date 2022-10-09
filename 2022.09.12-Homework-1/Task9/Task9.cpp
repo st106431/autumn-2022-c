@@ -2,12 +2,14 @@
 //
 
 #include <iostream>
-using namespace std;
-int x;
-int main()
+
+int main(int argc, char* argv[])
 {
-	cin >> x;
+	int x = 0;
+	std::cout << "Please, enter a number:" << std::endl;
+	std::cin >> x;
 	int t = x * x;
 	int s = t * (1 + x + t) + x + 1;
-	cout << s;
+	std::cout << s << std::endl;
+	return EXIT_SUCCESS;
 }
