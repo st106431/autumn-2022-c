@@ -1,5 +1,4 @@
 ﻿#include <iostream>
-<<<<<<< HEAD
 
 int main(int argc, char* argv[])
 {
@@ -14,18 +13,4 @@ int main(int argc, char* argv[])
 	int t = 3600 * (x - a) + 60 * (y - b) + z - c;
 	std::cout << t << std::endl;
 	return EXIT_SUCCESS;
-=======
-using namespace std;
-int a;
-int b;
-int c;
-int x;
-int y;
-int z;
-int main()
-{
-	cin >> a >> b >> c >> x >> y >> z;
-	int t = 3600 * (x - a) + 60 * (y - b) + z - c;
-	cout << t << endl;
->>>>>>> 7029f4519f3826835af31589c6b15b431c351f11
 }
