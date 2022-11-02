@@ -8,7 +8,7 @@ int main(int argc, char* argv[])
     std::cin >> v;
     std::cin >> t;
     int V = v % 109;
-    int s = (V+109)*t;
+    int s = (V + 109) * t;
     std::cout << s % 109 << std::endl;
     return EXIT_SUCCESS;
 }
