@@ -8,7 +8,7 @@ int main(int argc, char* argv[])
 	std::cin >> a;
 	std::cin >> b;
 	int count = 0;
-	count = a ^ ((a ^ b) & -(a < b));
+	count = a ^ ((a ^ b) & - (a < b));
 	std::cout << count << std::endl;
 	return EXIT_SUCCESS;
 }
