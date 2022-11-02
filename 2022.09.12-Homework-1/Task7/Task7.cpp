@@ -8,8 +8,8 @@ int main(int argc, char* argv[])
     std::cin >> a;
     std::cin >> b;
     int c = b;
-    int b = a;
-    int a = c;
+    b = a;
+    a = c;
     std::cout << a << " " << b << std::endl;
     return EXIT_SUCCESS;
 }
