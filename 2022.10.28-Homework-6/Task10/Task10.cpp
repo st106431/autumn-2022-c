@@ -8,7 +8,7 @@ int main(int argc, char* argv[])
     int const N = 30000;
     int mas_1[N]{ 0 };
     int mas_2[N]{ 0 };
-    int res[N]{ 100001 };
+    int res[N]{ 0 };
     int k[N]{ 0 };
     std::cin >> n >> m;
     for (int i = 0; i < n; ++i)
