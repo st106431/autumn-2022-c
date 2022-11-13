@@ -30,9 +30,11 @@ int main(int argc, char* argv[])
             mas_1[i] = mas[number + i];
         }
     }
+
     for (int i = 0; i < n; ++i)
     {
-        std::cout << mas_1[i];
+        mas[i] = mas_1[i];
+        std::cout << mas[i] << " ";
     }
     return EXIT_SUCCESS;
 }
