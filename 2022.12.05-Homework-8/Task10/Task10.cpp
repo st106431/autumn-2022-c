@@ -2,22 +2,19 @@
 
 int clear_forum(int n, int** mas, int k) 
 {
-    int number = -1;
+    int number = 0;
     for (int i = 0; i < n; ++i)
     {
+        if (mas[i][0] == k)
+        {
+            number += 1;
+        }
         if (mas[i][1] == k)
         {
-            number = i;
+            number += clear_forum(n, mas, mas[i][0]);
         }
     }
-    if (number == -1)
-    {
-        return 1;
-    }
-    else
-    {
-        return clear_forum(n, mas, mas[number][0]) + 1;
-    }
+    return number;
 }
 
 int main(int argc, char* argv[])
@@ -37,6 +34,10 @@ int main(int argc, char* argv[])
     }
     std::cin >> k;
     std::cout << clear_forum(n, mas, k) << std::endl;
-    delete[] mas;
+    for (int i = 0; i < n; ++i)
+    {
+        delete[] mas[i];
+    }
+        delete[] mas;
     return EXIT_SUCCESS;
 }

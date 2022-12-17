@@ -2,18 +2,19 @@
 
 int max_number(std::string s)
 {
-    if (s.length() == 1) 
+    if (s.length() == 1)
     {
         return static_cast<int>(s[0]) - 48;
     }
-    int number = max_number(s.substr(1));
-    if(number > static_cast<int>(s[0]) - 48)
+    int max = 0;
+    max = max_number(s.substr(1, s.length() - 1));
+    if(static_cast<int>(s[0]) - 48 > max)
     {
-        return number;
+        return static_cast<int>(s[0]) - 48;
     }
     else
     {
-        return static_cast<int>(s[0]) - 48;
+        return max;
     }
 }
 
